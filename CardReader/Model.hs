@@ -33,11 +33,20 @@ Person
     number CardNum
     lastName Text
     firstName Text
+    traceEnabled Bool
     cardType CardType
-    expires UTCTime Maybe
+    limitedUses Bool
+    expires Day Maybe
+    accessLevels Text Maybe
+    siteCode Int Maybe
+    pin Int Maybe
     info1 Text Maybe
     info2 Text Maybe
+    timeZones Text Maybe
     activated UTCTime
+    issueLevel Int Maybe
+    apbState Int Maybe
+    controlDevice Int Maybe
     Primary number
     deriving Show
 Message
@@ -48,8 +57,8 @@ Message
 DayRow
     fName Text
     lName Text
-    cardType Text
-    cardNum Int
+    cardType CardType
+    cardNum CardNum Maybe
     utc UTCTime
     deriving Read Show
 |]

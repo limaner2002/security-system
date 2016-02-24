@@ -55,3 +55,4 @@ library
                  , conduit
                  , yesod-table
                  , esqueleto
+                 , http-api-data
